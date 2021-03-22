@@ -1,0 +1,39 @@
+.super-mario{
+    height: 180px;
+}
+
+.goomba{
+    height: 180px;
+}
+
+.baloon{
+    height: 90px;
+    /*float: right;
+    padding-right: 1000px;
+    padding-top: 10px;
+    margin: -100px;
+*/
+}
+
+.bowser{
+    height: 180px;
+    /*float: right;
+    padding-right: 800px;
+    padding-bottom: 10px;
+*/    
+}
+
+.word{
+    /*position: absolute;
+    top: 180px;
+    padding-left: 411px;
+    z-index: 1;*/
+}
+
+.right-block{
+    float: right;
+}
+
+div{
+    border: 1px solid red;
+}
