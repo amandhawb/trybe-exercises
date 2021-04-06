@@ -63,19 +63,24 @@
       document.body.appendChild(text);
 
       //2
-      let div = document.createElement("div");
-      div.classList.add("main-content");
-      document.body.appendChild(div);
+      let div1 = document.createElement("div");
+      div1.classList.add("main-content");
+      document.body.appendChild(div1);
 
       //3
       let div2 = document.createElement("div");
       div2.classList.add("center-content");
-      div.appendChild(div2);
+      div1.appendChild(div2);
 
       //4
       let paragraph = document.createElement("p");
       paragraph.innerText = "Exercícios para criar e manipular elementos.";
       div2.appendChild(paragraph);
+
+      //5
+      let div3 = document.createElement("div");
+      div3.classList.add("left-content");
+      div1.appendChild(div3);
     </script>
   </body>
 </html>
