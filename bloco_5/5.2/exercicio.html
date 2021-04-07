@@ -61,7 +61,6 @@
       let text = document.createElement("h1");
       text.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(text);
-      text.classList.add("title");
 
       //2
       let div1 = document.createElement("div");
@@ -122,13 +121,24 @@
       //9
       let subtitle1 = document.createElement("h3");
       div1.appendChild(subtitle1);
-      subtitle1.classList.add("description");
       let subtitle2 = document.createElement("h3");
       div1.appendChild(subtitle2);
-      subtitle2.classList.add("description");
       let subtitle3 = document.createElement("h3");
       div1.appendChild(subtitle3);
+
+      //1.2
+      text.classList.add("title");
+
+      //2.2
+      subtitle1.classList.add("description");
+      subtitle2.classList.add("description");
       subtitle3.classList.add("description");
+
+      //3.2
+      div3.parentElement.removeChild(div3);
+
+      //4.2
+      div4.style.marginRight = "auto";
     </script>
   </body>
 </html>
