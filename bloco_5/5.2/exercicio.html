@@ -92,6 +92,39 @@
       image.classList.add("small-image");
       image.setAttribute("src", "https://picsum.photos/200");
       div3.appendChild(image);
+
+      //8
+      function createLi(string) {
+        let listElement = document.createElement("li");
+        listElement.innerText = string;
+        return listElement;
+      }
+      let list = document.createElement("ul");
+      let meuArray = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      for (let i = 0; i < meuArray.length; i += 1) {
+        let currentNumber = meuArray[i];
+        list.appendChild(createLi(currentNumber));
+      }
+      div3.appendChild(list);
+
+      //9
+      let subtitle1 = document.createElement("h3");
+      div1.appendChild(subtitle1);
+      let subtitle2 = document.createElement("h3");
+      div1.appendChild(subtitle2);
+      let subtitle3 = document.createElement("h3");
+      div1.appendChild(subtitle3);
     </script>
   </body>
 </html>
