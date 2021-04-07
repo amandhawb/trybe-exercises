@@ -61,6 +61,7 @@
       let text = document.createElement("h1");
       text.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(text);
+      text.classList.add("title");
 
       //2
       let div1 = document.createElement("div");
@@ -121,10 +122,13 @@
       //9
       let subtitle1 = document.createElement("h3");
       div1.appendChild(subtitle1);
+      subtitle1.classList.add("description");
       let subtitle2 = document.createElement("h3");
       div1.appendChild(subtitle2);
+      subtitle2.classList.add("description");
       let subtitle3 = document.createElement("h3");
       div1.appendChild(subtitle3);
+      subtitle3.classList.add("description");
     </script>
   </body>
 </html>
