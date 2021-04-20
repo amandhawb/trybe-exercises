@@ -64,6 +64,8 @@ function createDaysOfMonth() {
     let currentDayNumber = dezDaysList[i];
     let currentDayElement = document.createElement("li");
     currentDayElement.innerText = currentDayNumber;
+    currentDayElement.numeroOriginal = currentDayNumber;
+
     currentDayElement.classList.add("day");
     ul.appendChild(currentDayElement);
     if (
@@ -85,14 +87,14 @@ function createDaysOfMonth() {
 }
 createDaysOfMonth();
 
-function createButton(string) {
+function createButtonHoliday(string) {
   let buttonElement = document.createElement("button");
   buttonElement.id = "btn-holiday";
   buttonElement.innerHTML = string;
   let divElement = document.getElementsByClassName("buttons-container")[0];
   divElement.appendChild(buttonElement);
 }
-createButton("Feriados");
+createButtonHoliday("Feriados");
 
 function changeColorHoliday() {
   let holidayElements = document.querySelectorAll(".holiday");
@@ -108,3 +110,42 @@ function changeColorHoliday() {
 
 let clickHoliday = document.getElementById("btn-holiday");
 clickHoliday.addEventListener("click", changeColorHoliday);
+
+function createButtonFriday(string) {
+  let buttonElement = document.createElement("button");
+  buttonElement.id = "btn-friday";
+  buttonElement.innerHTML = string;
+  let divElement = document.getElementsByClassName("buttons-container")[0];
+  divElement.appendChild(buttonElement);
+}
+createButtonFriday("Sexta-Feira");
+
+function changePhraseFriday() {
+  let fridayElement = document.querySelectorAll(".friday");
+  for (let i = 0; i < fridayElement.length; i += 1) {
+    let currentFridayElement = fridayElement[i];
+    let newPhrase = "friyay!";
+    if (currentFridayElement.innerText === "friyay!") {
+      newPhrase = currentFridayElement.numeroOriginal;
+    }
+    currentFridayElement.innerText = newPhrase;
+  }
+}
+
+let clickFriday = document.getElementById("btn-friday");
+clickFriday.addEventListener("click", changePhraseFriday);
+
+function biggerElement(event) {
+  let elementSelected = event.target;
+  elementSelected.style.fontSize = "28px";
+}
+function smallerElement(event) {
+  let elementSelectedSmall = event.target;
+  elementSelectedSmall.style.fontSize = "20px";
+}
+
+let dayList = document.querySelectorAll(".day");
+for (let i = 0; i < dayList.length; i += 1) {
+  dayList[i].addEventListener("mouseover", biggerElement);
+  dayList[i].addEventListener("mouseout", smallerElement);
+}
