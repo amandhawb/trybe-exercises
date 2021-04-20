@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="contentText">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+      vehicula sapien, et feugiat velit. Sed venenatis auctor risus ut
+      elementum. Donec tempus vulputate ante, sit amet hendrerit sem eleifend
+      nec. Phasellus a cursus augue. Aliquam erat volutpat. Suspendisse laoreet
+      ipsum quis leo mollis pellentesque. Etiam a magna at ligula sagittis
+      auctor. Vestibulum in tristique ipsum, eget molestie lorem. In ac
+      condimentum sapien. Duis venenatis suscipit dolor, a vehicula arcu
+      pulvinar sed. Sed purus purus, elementum et quam sit amet, viverra
+      pulvinar est. Phasellus ornare sapien consectetur nulla consequat
+      sollicitudin. Nulla vitae congue magna. Nulla aliquam neque odio, sit amet
+      lacinia turpis egestas sed. Nunc rhoncus cursus sem, sit amet dictum justo
+      faucibus ac. Etiam tempus, nisl scelerisque maximus aliquet, lacus enim
+      consequat risus, sit amet ultricies turpis quam sit amet massa. Cras
+      convallis enim quis ipsum tempor ultricies. Duis sollicitudin velit
+      turpis, nec gravida nisi ultrices quis. In hac habitasse platea dictumst.
+      Ut velit lectus, aliquam et finibus quis, gravida sed arcu. Morbi non
+      metus leo. Maecenas sit amet fringilla lectus. Etiam vitae lectus dictum,
+      ultrices massa suscipit, sagittis orci. Aenean tempus augue nibh, ac
+      venenatis lorem consequat et. Nullam euismod id urna pharetra dignissim.
+      In et arcu turpis. Quisque auctor tempus libero, vitae pulvinar sem
+      viverra nec. Cras vitae ligula eleifend, dictum augue eget, tristique
+      mauris. Cras mi elit, consectetur at velit et, ullamcorper pharetra orci.
+      Curabitur imperdiet augue sed tellus imperdiet elementum. Phasellus
+      aliquet tincidunt dolor sit amet condimentum. Praesent ultricies augue in
+      orci elementum, sed porttitor leo tempor. Mauris dignissim maximus velit,
+      sed fringilla felis consequat vel. Aenean interdum nunc eu lorem lobortis,
+      non pulvinar ante sollicitudin. Integer eu fringilla magna. Nullam rutrum
+      arcu vitae est pellentesque rhoncus. Suspendisse scelerisque nibh quam, ac
+      convallis nulla ornare sit amet. Ut semper tellus nec efficitur commodo.
+      Vivamus ornare placerat dolor a vestibulum. Donec vestibulum est enim, at
+      hendrerit ex pellentesque in. Suspendisse potenti. Maecenas egestas, massa
+      nec rhoncus consequat, dolor urna vulputate nisi, et maximus justo elit
+      eget nibh. Integer ut arcu sollicitudin, congue risus a, tristique metus.
+      Vivamus pharetra elit in pretium aliquam. Maecenas in malesuada dolor. Sed
+      erat sapien, viverra ut semper sed, tempus tempus sapien. In vulputate
+      ante sit amet velit vulputate, ut malesuada elit placerat. Phasellus
+      vestibulum nunc orci, in luctus nisl tincidunt ac. Phasellus elementum non
+      est aliquam lacinia. Morbi facilisis quis nisl eget eleifend. Aenean eu
+      tempor nulla. Morbi at condimentum est. Suspendisse potenti. Donec varius
+      elit mauris, ut venenatis tellus consectetur sit amet. Nulla semper enim
+      vel eros porta consectetur et nec risus. Vivamus eu neque viverra massa
+      rhoncus tempor. Duis id lectus tincidunt, dignissim orci sit amet,
+      vulputate lacus.
+    </p>
+    <div class="textBoxContainer"></div>
+    <div class="buttonContainer"></div>
+  </body>
+  <script>
+    let textBox = document.createElement("input");
+    textBox.classList.add("textBox");
+    let div1 = document.getElementsByClassName("textBoxContainer")[0];
+    div1.appendChild(textBox);
+
+    let button = document.createElement("button");
+    button.classList.add("buttonSave");
+    let div2 = document.getElementsByClassName("buttonContainer")[0];
+    div2.appendChild(button);
+    button.innerText = "Salvar";
+
+    button.addEventListener("click", clickButton);
+    let valueLocalStorage = localStorage.getItem("backgroundColor");
+    if (valueLocalStorage == !"") {
+    }
+    function clickButton(evento) {
+      let textBoxValue = document.getElementsByClassName("textBox")[0].value;
+      let contentText = document.getElementsByClassName("contentText")[0];
+      contentText.style.backgroundColor = textBoxValue;
+      localStorage.setItem("backgroundColor", textBoxValue);
+    }
+  </script>
+</html>
