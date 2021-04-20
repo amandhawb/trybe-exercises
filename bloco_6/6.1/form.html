@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Exercícios sobre Forms</h1>
+    <br />
+    <form>
+      <fieldset>
+        <label>Nome:</label>
+        <input type="text" maxlength="40" required name="form" id="name" />
+        <label>Email:</label>
+        <input type="text" maxlength="50" required name="form" id="email" />
+        <label>CPF:</label>
+        <input type="text" maxlength="11" required name="form" id="cpf" />
+        <label>Endereço:</label>
+        <input type="text" maxlength="200" required name="form" id="address" />
+        <label>Cidade:</label>
+        <input type="text" maxlength="28" required name="form" id="city" />
+        <label>Estado:</label>
+        <select name="form" id="state"></select>
+        <label for="house">Casa</label>
+        <input type="radio" required name="form" id="house" />
+        <label for="apartment">Apartamento</label>
+        <input type="radio" required name="form" id="apartment" />
+      </fieldset>
+
+      <fieldset>
+        <label>Resumo do currículo:</label>
+        <textarea
+          maxlength="1000"
+          required
+          name="job-section"
+          id="resume"
+        ></textarea>
+        <label>Descrição do cargo:</label>
+        <textarea
+          maxlength="500"
+          required
+          name="job-section"
+          id="cargo"
+        ></textarea>
+        <label>Data de início:</label>
+        <input
+          type="text"
+          required
+          name="job-section"
+          id="date"
+          placeholder="dd/mm/aaaa"
+        />
+      </fieldset>
+      <button type="submit" name="button" id="button-submit">Enviar</button>
+      <button type="button" name="clean" id="clean">Limpar</button>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
