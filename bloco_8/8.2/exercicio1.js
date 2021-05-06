@@ -18,8 +18,22 @@ emailListInData.forEach((item) => {
 const names = ['Bianca', 'Camila', 'Fernando', 'Ana Roberta'];
 
 const convertToUpperCase = (name) => {
-  name = name.toUpperCase();
+  names[index] = name.toUpperCase();
 };
 
 names.forEach(convertToUpperCase);
-console.log(name);
+console.log(names);
+
+//
+
+const grades = {
+  portugues: 'Aprovado',
+  matematica: 'Reprovado',
+  ingles: 'Aprovado',
+};
+
+const verifyGrades = (studentGrades) => (
+  Object.values(studentGrades).every((grade) => grade === 'Aprovado')
+);
+
+console.log(verifyGrades(grades));
