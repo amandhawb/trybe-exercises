@@ -5,7 +5,7 @@ const assert = require('assert');
 const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
-function avarege(array) {
+function average(array) {
   const result = array.reduce((acc, value) => {
     return value + acc;
   }, 0);
@@ -14,7 +14,7 @@ function avarege(array) {
 
 function studentAverage() {
   const result = students.map((value, index) => {
-    return { name: value, average: avarege(grades[index])}
+    return { name: value, average: average(grades[index])}
   });
   return result
 }

@@ -1,16 +1,22 @@
 // PARTE 2 - Exercício 1 //
 
-function fatorial (n){
-  let numerosParaMultiplicar = [];
-  for (let i = n; i > 0; i -= 1) {
-    numerosParaMultiplicar.push(i);
+// 1. Crie uma função que receba um número e retorne seu fatorial.
+
+const fatorial = number => {
+  if (number === 0) {
+    return 1;
+  }
+  let numbersToMultiplicate = [];
+  for (let i = number; i > 0; i -=1) {
+    numbersToMultiplicate.push(i);
   }
   let result = 1;
-  for (let i = 0; i < numerosParaMultiplicar.length; i += 1) {
-    result = result * numerosParaMultiplicar[i];
+  for (let i = 0; i < numbersToMultiplicate.length; i += 1) {
+    result = result * numbersToMultiplicate[i];
   }
   return result;
-}
+};
+console.log(fatorial(5));
 
 // PARTE 2 - Exercício 2 //
 
