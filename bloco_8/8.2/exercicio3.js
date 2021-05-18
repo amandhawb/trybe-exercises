@@ -1,4 +1,4 @@
-// 1. Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+// 3. Encontre o primeiro livro cujo nome possui 26 caracteres.
 
 const assert = require('assert');
 
@@ -64,15 +64,20 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// primeira forma de resolver:
-function authorBornIn1947() {
-  return books.find((value) => value.author.birthYear === 1947).author.name
+
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+function getNamedBook() {
+  return books.find((value) => value.name.length === 26);
 }
 
-// segunda forma de resolver: 
-// function authorBornIn1947() {
-//   const result = books.find((value) => value.author.birthYear === 1947);
-//   return result.author.name
-// }
-
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.deepStrictEqual(getNamedBook(), expectedResult);

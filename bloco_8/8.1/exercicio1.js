@@ -8,13 +8,13 @@ const coffeeTime = () => console.log('Bora tomar café!!');
 const sleepTime = () => console.log('Partiu dormir!!');
 
 // 4. Desenvolva uma HOF chamada doingThings e configure esta função para que retorne a execução das funções de primeira classe que você criou nos exemplos anteriores. 
-const doingThings = (function1, function2, function3) => {
-  function1();
-  if (function2 !== undefined) {
-    function2();
+const doingThings = (callback1, callback2, callback3) => {
+  callback1();
+  if (callback2) {
+    callback2();
   }
-  if (function3 !== undefined) {
-    function3();
+  if (callback3) {
+    callback3();
   }
 };
-doingThings(wakeUp, coffeeTime, sleepTime);
+doingThings(coffeeTime, wakeUp, sleepTime);
