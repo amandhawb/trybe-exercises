@@ -1,4 +1,4 @@
-// 1. Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+// 2. Retorne o nome do livro de menor nome.
 
 const assert = require('assert');
 
@@ -64,15 +64,15 @@ const books = [
     releaseYear: 1928,
   },
 ];
-// primeira forma de resolver:
-function authorBornIn1947() {
-  return books.find((value) => value.author.birthYear === 1947).author.name
+
+function smallerName() {
+  let nameBook;
+  books.forEach((value) => {
+    if (!nameBook || value.name.length < nameBook.length) {
+       nameBook = value.name
+    }
+  });
+  return nameBook;
 }
 
-// segunda forma de resolver: 
-// function authorBornIn1947() {
-//   const result = books.find((value) => value.author.birthYear === 1947);
-//   return result.author.name
-// }
-
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
+assert.strictEqual(smallerName(), 'Duna');
