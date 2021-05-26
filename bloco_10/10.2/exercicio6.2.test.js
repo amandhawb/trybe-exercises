@@ -4,7 +4,7 @@ describe('Tests from exercice 6 part 2', () => {
   it ('should returns an object', () => {
     expect.assertions(1);
     return getListAnimal(1).then(animal => {
-      expect(animal).toEqual([{ name: 'Dorminhoco', age: 1, type: 'Dog' }],);
+      expect(animal).toEqual([{ name: 'Dorminhoco', age: 1, type: 'Dog' }]);
     });
   });
   it ('should returns an error', () => {
