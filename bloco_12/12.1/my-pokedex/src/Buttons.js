@@ -20,7 +20,7 @@ class Buttons extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handlePokemon}>Próximo botão</button>
+        <button onClick={this.handlePokemon}>Próximo pokemon</button>
         <Pokemon pokemon={pokemons[this.state.indexPokemon]} />
       </div>
     )
